@@ -236,7 +236,8 @@ public class TicTacToe_Code implements ActionListener {
             String name = enter_winners_name.getText(); // getting the winner's name
             try{
                 System.out.println("connecting to the database");
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tictactoe","root","F84reqa@HldrOBRa"); // connection to the database
+                // removed the username and password from the link below for security reasons
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tictactoe","",""); // connection to the database
                 System.out.println("Connected");
 
                 stm = conn.createStatement();
